@@ -25,7 +25,6 @@ public class SearchController {
     @GetMapping("/weather/search")
     public ResponseEntity<?> getDetails(@RequestParam String[] cities) {
         System.out.println(Arrays.asList(cities));
-//        return null;
         return new ResponseEntity<List>(searchService.searchWeatherByNames(cities), HttpStatus.OK);
     }
 }
